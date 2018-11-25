@@ -1,0 +1,230 @@
+.select2-container--default .select2-selection--single { border-color:#DCDEE0; height:50px; }
+.select2-container--default .select2-selection--single .select2-selection__rendered	{ line-height: 50px; padding-left:16px; }
+.select2-container--default .select2-selection--single .select2-selection__arrow { height:50px; }
+
+body {
+	backgroud-color:#e5f5e6;
+}
+
+.service > img {
+	width : 100%;
+}
+
+.vertical-form > input, .vertical-form > textarea {
+	width: 100%;
+}
+.vertical-form > textarea {
+	height: 200px;
+}
+
+.width10 {width: 10%}
+.width20 {width: 20%}
+.width30 {width: 30%}
+.width40 {width: 40%}
+.width50 {width: 50%}
+.width60 {width: 60%}
+.width70 {width: 70%}
+.width80 {width: 80%}
+.width90 {width: 90%}
+.width100 {width: 100%}
+
+/*-----------------------------------------------------------------------------------*/
+/*	PANINATION
+/*-----------------------------------------------------------------------------------*/
+nav {
+	display:block;
+}
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0 0 20px 0;
+  border-radius: 4px;
+}
+.pagination>li {
+  display: inline;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  cursor: not-allowed;
+  background-color: rgba(0,0,0,0.3);
+  border-color: #333;
+}
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.3);
+  border: 1px solid #333;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	SOCIAL
+/*-----------------------------------------------------------------------------------*/
+.social {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0px;
+}
+#footer .social {
+    margin: 0;
+    text-align: left;
+}
+.social li {
+    display: inline;
+    margin: 0 2px;
+}
+.social a {
+    background: transparent url(../image/social-icons.png) no-repeat 0 0;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: none 200ms ease-in;
+    -o-transition: none 200ms ease-in;
+    -moz-transition: none 200ms ease-in;
+}
+.social a.rss {
+    background-position: 0 0
+}
+.social a.facebook {
+    background-position: -32px 0
+}
+.social .twitter {
+    background-position: -64px 0
+}
+.social .dribbble {
+    background-position: -96px 0
+}
+.social .pinterest {
+    background-position: -128px 0
+}
+.social .flickr {
+    background-position: -160px 0
+}
+.social .linkedin {
+    background-position: -192px 0
+}
+.social .vimeo {
+    background-position: -224px 0
+}
+.social .lastfm {
+    background-position: -256px 0
+}
+.social .tumblr {
+    background-position: -288px 0
+}
+.social .forrst {
+    background-position: -320px 0
+}
+.social .skype {
+    background-position: -352px 0
+}
+.social .friendfeed {
+    background-position: -384px 0
+}
+.social .deviantart {
+    background-position: -416px 0
+}
+.social .google {
+    background-position: -448px 0
+}
+.social .cnblogs {
+    background-position: -480px 0
+}
+.social .github {
+    background-position: -512px 0
+}
+.social a.rss:hover {
+    background-position: 0 bottom
+}
+.social .facebook:hover {
+    background-position: -32px bottom
+}
+.social .twitter:hover {
+    background-position: -64px bottom
+}
+.social .dribbble:hover {
+    background-position: -96px bottom
+}
+.social .pinterest:hover {
+    background-position: -128px bottom
+}
+.social .flickr:hover {
+    background-position: -160px bottom
+}
+.social .linkedin:hover {
+    background-position: -192px bottom
+}
+.social .vimeo:hover {
+    background-position: -224px bottom
+}
+.social .lastfm:hover {
+    background-position: -256px bottom
+}
+.social .tumblr:hover {
+    background-position: -288px bottom
+}
+.social .forrst:hover {
+    background-position: -320px bottom
+}
+.social .skype:hover {
+    background-position: -352px bottom
+}
+.social .friendfeed:hover {
+    background-position: -384px bottom
+}
+.social .deviantart:hover {
+    background-position: -416px bottom
+}
+.social .google:hover {
+    background-position: -448px bottom
+}
+.social .cnblogs:hover {
+    background-position: -480px bottom
+}
+.social .github:hover {
+    background-position: -512px bottom
+}
+
+.doc_container table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: grey;
+}
+
+.doc_container thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.doc_container th {
+    font-weight: bold;
+}
+
+.doc_container tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.doc_container tbody tr:nth-of-type(odd) {
+    background: #fafafa;
+}
+
+.doc_container td, .doc_container  th {
+    padding: 8px 8px;
+    border-bottom: 1px solid #e5e5e5;
+}

@@ -1,0 +1,336 @@
+/* 这个设置让padding包含在width之中 */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.forkmde-inner-actions>button {
+    width: 35px;
+    height: 35px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: -1px;
+    padding: 0px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-appearance: button;
+}
+
+.forkmde-inner-actions>button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    text-decoration: none;
+}
+
+.forkmde-inner-actions>button>* {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.forkmde-inner-actions>button>span {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.forkmde-inner-actions>button:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.forkmde-inner-actions>button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+.forkmde-inner-actions>button:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.forkmde-inner-editor:after {
+    clear: both;
+}
+
+.forkmde-inner-editor {
+    min-height: 200px;
+    width: 100%;
+    height: 90%;
+    font-family: "Microsoft Yahei";
+}
+
+.forkmde-inner-editor>* {
+    float: left;
+    min-height: 180px;
+    width: 50%;
+    height: 100%;
+}
+
+.forkmde-inner-content {
+    position: relative;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    overflow-y: scroll;
+}
+
+.forkmde-inner-content > p {
+    margin: 0;
+}
+
+.forkmde-outer-content {
+    position: relative;
+    padding: 10px;
+    margin-top: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: #ccc 2px solid;
+    border-radius: 5px;
+}
+
+.forkmde-outer-content>* {
+    overflow-x: auto;
+}
+
+/* 
+ * ==================================================
+ * preview table
+ * ==================================================
+ */
+
+.forkmde-outer-content p {
+    margin: 5px 0px;
+}
+
+.forkmde-outer-content>.katex {
+    width: 100%;
+    text-align: center;
+    margin: 5px auto;
+    display: block;
+}
+
+.forkmde-outer-content>svg, .forkmde-outer-content>div>svg {
+    margin: 5px auto;
+    display: block;
+}
+
+.forkmde-outer-content table {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px #ddd;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.forkmde-outer-content table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+.forkmde-outer-content table>tbody>tr>td, .forkmde-outer-content table>tbody>tr>th, 
+.forkmde-outer-content table>tfoot>tr>td, .forkmde-outer-content table>tfoot>tr>th, 
+.forkmde-outer-content table>thead>tr>td, .forkmde-outer-content table>thead>tr>th {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border: 1px solid #ddd;
+}
+.forkmde-outer-content table>tbody>tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.06);;
+}
+
+.forkmde-outer-content blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+
+.forkmde-outer-content pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+}
+
+.forkmde-outer-content code {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.forkmde-outer-content pre code {
+    width: 100%;
+    color: #333;
+    background: transparent;
+}
+
+/**
+ *=========================================================
+ * mermaid
+ *=========================================================
+ */
+.edgeLabel {
+    background:rgba(255, 255, 255, 0.8);
+    filter:Alpha(opacity=80);
+}
+.mermaid .label {
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+/**
+ *=========================================================
+ * copied from bootstrap
+ *=========================================================
+ */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+/* 
+ * ==================================================
+ * https://github.com/google/material-design-icons
+ * https://design.google.com/icons/ 
+ * ==================================================
+ */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'),
+        url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+        url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    cursor: pointer;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* =========================================================== */
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+        url('../fonts/raleway-light-webfont.woff') format('woff'),
+        url('../fonts/raleway-light-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+        url('../fonts/raleway-regular-webfont.woff') format('woff'),
+        url('../fonts/raleway-regular-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/raleway-semibold-webfont.woff2') format('woff2'),
+        url('../fonts/raleway-semibold-webfont.woff') format('woff'),
+        url('../fonts/raleway-semibold-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+        url('../fonts/raleway-bold-webfont.woff') format('woff'),
+        url('../fonts/raleway-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

@@ -20,8 +20,8 @@
 </div>
 <!-- /.page-banner -->
 
-<div class="page-main container">
-    <div class="col-md-9">
+<div class="page-main container" uk-grid>
+    <div class="uk-width-3-4@m uk-width-1-1@s">
         <#list posts.content?sort_by("postDate")?reverse as post>
         <div class="content box">
             <h3>
@@ -36,9 +36,9 @@
         </div>
         </#list>
 
-        <@page urlPrefix="${category.cateUrl}/page"></@page>
+        <@page urlPrefix="/categories/${category.cateUrl}/page"></@page>
     </div>
-    <div class="col-md-3">
+    <div class="uk-width-1-4@m uk-width-1-1@s">
         <#include "sidebar.ftl"/>
     </div>
     <div class="clear"></div>

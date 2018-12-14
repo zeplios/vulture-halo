@@ -6,46 +6,22 @@ $(function() {
     handleAccordionMenu();
     handleTooltips();
     handleFloatingLabels();
-    handlePackageSwitcher();
     // checkBoxes($('body'));
 
     if ($('body').hasClass('page-scrollspy')) {
         handleScrollSpySidebar();
     }
-
-    $('.reponsive-image-types > li > a').on('click', function(e) {
-        e.preventDefault();
-        var imageType = $(this).data('type');
-        var imagePreview = $('.responsive-image .browser');
-        imagePreview.removeClass('desktop-size tablet-size mobile-size').addClass(imageType);
-        $(this).closest('ul').find('li').removeClass('active');
-        $(this).parent().addClass('active');
-        imagePreview.find('.control-panel').removeClass('animated');
-        setTimeout(function() {
-            imagePreview.find('.control-panel').addClass('animated');
-        }, 1000);
-    });
   
     $('.play').on('click', function() {
         var $controlPanel = $(this).parent();
         
-        $(this).closest('.responsive-image').find('.animated').removeClass('animated').parent();
         $controlPanel.removeClass('animated');
 
         setTimeout(function() {
           $controlPanel.addClass('animated');
         }, 10);
     });
-  
-    //Change the browser to mobile phone in the Control Panel feature subapge
-    if ($(window).width() < 768) {
-        $('.repsonsive-image-multiple .browser').removeClass('tablet-size desktop-size').addClass('mobile-size');
-    }
-    $(window).resize(function() {
-        if ($(window).width() < 768) {
-            $('.repsonsive-image-multiple .browser').removeClass('tablet-size desktop-size').addClass('mobile-size');
-        }
-    });
+
     $('.tabs-responsive .dropdown').on('show.bs.dropdown', function () {
         $('.tabs-responsive, .tabs-responsive .nav').css( "overflow", "inherit" );
     });
@@ -217,24 +193,6 @@ var handleAccordionMenu = function() {
         } else {
             $('.accordion li').removeClass('open');
             currLi.find('.collapse').collapse('toggle');
-        }
-    });
-};
-
-var handlePackageSwitcher = function() {
-    "use strict";
-    var switcher = $('.packages-switcher');
-    switcher.on('click', function() {
-        if($(this).hasClass('monthly')) {
-            $(this).removeClass('monthly');
-            $('.package').each(function() {
-                $(this).find('.package-price > span').html($(this).find('.package-price').data('hourly'));
-            });
-        } else {
-            $(this).addClass('monthly');
-            $('.package').each(function() {
-                $(this).find('.package-price > span').html($(this).find('.package-price').data('monthly'));
-            });
         }
     });
 };

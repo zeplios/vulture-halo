@@ -24,8 +24,8 @@
 </div>
 <!-- /.page-banner -->
 
-<div class="page-main container">
-    <div class="col-md-9">
+<div class="page-main container" uk-grid>
+    <div class="uk-width-3-4@m">
         <@articleTag method="archives">
         <#list archives as archive>
             <h3>${archive.year}年${archive.month}月</h3>
@@ -46,7 +46,7 @@
 
         <#--<#include "common/page.html"/>-->
     </div>
-    <div class="col-md-3">
+    <div class="uk-width-1-4@m">
         <#include "sidebar.ftl"/>
     </div>
     <div class="clear"></div>

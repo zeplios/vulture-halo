@@ -10,8 +10,8 @@
 <div class="page-banner">
 </div>
 
-<div class="page-main container">
-    <div class="col-md-9">
+<div class="page-main container" uk-grid>
+    <div class="uk-width-3-4@m uk-width-1-1@s">
         <div class="content box">
             <h3>分类列表</h3>
             <ul class="uk-list uk-list-large uk-list-divider">
@@ -24,7 +24,7 @@
         </div>
 
     </div>
-    <div class="col-md-3">
+    <div class="uk-width-1-4@m uk-width-1-1@s">
         <#include "sidebar.ftl"/>
     </div>
     <div class="clear"></div>

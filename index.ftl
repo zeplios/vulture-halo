@@ -19,29 +19,29 @@
             </#if>
             <ul class="social">
                 <#if options.theme_vulture_sns_rss?default('true')=='true'>
-                <li><a class="rss" title="rss" href="/feed.xml" target="_blank"></a></li>
+                <li><a uk-icon="icon: rss; ratio: 0.7" class="uk-icon-button" title="rss" href="/feed.xml" target="_blank"></a></li>
                 </#if>
 
                 <#if options.theme_vulture_sns_facebook??>
-                <a class="facebook" title="facebook" href="https://www.facebook.com/${options.theme_vulture_sns_facebook}" target="_blank"></a>
+                <a uk-icon="icon: facebook; ratio: 0.7" class="uk-icon-button" title="facebook" href="https://www.facebook.com/${options.theme_vulture_sns_facebook}" target="_blank"></a>
                 </#if>
 
                 <#if options.theme_vulture_sns_twitter??>
-                <li><a class="twitter" title="twitter" href="https://twitter.com/${options.theme_vulture_sns_twitter}" target="_blank"></a></li>
+                <li><a uk-icon="icon: twitter; ratio: 0.7" class="uk-icon-button"  title="twitter" href="https://twitter.com/${options.theme_vulture_sns_twitter}" target="_blank"></a></li>
                 </#if>
 
                 <#if options.theme_vulture_sns_github??>
-                <a class="github" title="github" href="https://github.com/${options.theme_vulture_sns_github}" target="_blank"></a>
+                <a uk-icon="icon: github; ratio: 0.7" class="uk-icon-button" title="github" href="https://github.com/${options.theme_vulture_sns_github}" target="_blank"></a>
                 </#if>
 
-                <li><a class="google" title="google+" href="https://plus.google.com/u/0/118043211116587592748/posts" target="_blank"></a></li>
+                <li><a uk-icon="icon: google-plus; ratio: 0.7" class="uk-icon-button" title="google+" href="https://plus.google.com/u/0/118043211116587592748/posts" target="_blank"></a></li>
 
                 <#if options.theme_vulture_sns_cnblog??>
-                <a class="cnblogs" title="博客园" href="https://www.cnblogs.com/${options.theme_vulture_sns_cnblog}/" target="_blank">
+                <a uk-icon="icon: bold; ratio: 0.7" class="uk-icon-button" title="博客园" href="https://www.cnblogs.com/${options.theme_vulture_sns_cnblog}/" target="_blank">
                 </a>
                 </#if>
 
-                <li><a class="linkedin" title="linkedin" href="http://cn.linkedin.com/in/zhangfc" target="_blank"></a></li>
+                <li><a uk-icon="icon: linkedin; ratio: 0.7" class="uk-icon-button" title="linkedin" href="http://cn.linkedin.com/in/zhangfc" target="_blank"></a></li>
             </ul>
         </div>
     </div>
@@ -51,17 +51,17 @@
     <div class="container">
         <h2 class="section-title">系列文章</h2>
 
-        <div class="services">
-            <div class="row">
+        <div class="tag-blocks">
+            <div class="archive-items uk-child-width-1-3@m uk-child-width-1-1@s">
                 <#list posts.content as post>
                 <#-- The tag below includes the markup for each post - partials/post-card.hbs -->
                 <#-- @post_card post></@post_card -->
-                <div class="col-sm-4">
-                    <a class="service" href="/archives/${post.postUrl}">
+                <div class="archive-item">
+                    <a class="tag-block" href="/archives/${post.postUrl}">
                         <#if post.postThumbnail??>
                         <img src="${post.postThumbnail}" uk-scrollspy="cls: uk-animation-scale-up; repeat: true" class="uk-box-shadow-medium uk-border-rounded" alt="" />
                         </#if>
-                        <div class="service-body">
+                        <div class="tag-block-body">
                             <#--if post.categories?? && post.categories?size gt 0>
                             <span class="post-card-tags">${post.categories[0].cateName}</span>
                             </#if-->
@@ -80,5 +80,8 @@
 <!-- /.page-section -->
 <#include "common/footer.ftl"/>
 <#include "common/js.ftl"/>
+<script type="text/javascript" src="http://cdn.zfcyc.com/masonry-layout@4/4.2.2/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="http://cdn.zfcyc.com/imagesloaded@4/4.1.4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/${themeName}/source/js/index.js"></script>
 </body>
 </html>

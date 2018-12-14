@@ -28,26 +28,26 @@
 </div>
 <!-- /.page-banner -->
 
-<div class="page-main container" id="articleArea">
-    <div class="col-md-9">
+<div class="page-main container" id="articleArea" uk-grid>
+    <div class="uk-width-3-4@m uk-width-1-1">
         <div class="doc_container">
             <div class="doc_header">
                 <h1>${post.postTitle}</h1>
-                <div>Modified on: ${post.postDate?string('yyyy-MM-dd')}<br /></div>
+                <input style="display: none" id="postId" value="${post.postId}"/>
+                <div class="uk-margin-small-bottom">Modified on: ${post.postDate?string('yyyy-MM-dd')}</div>
                 <div>
                 <#--if post.categories?? && post.categories?size gt 0>
                 <a class="doc_tag" href="/categories/${post.categories[0].cateUrl}">${post.categories[0].cateName}</a>
                 </#if-->
                 <#list post.tags as tag>
-                    <a class="doc_tag" href="#">${tag.tagName}</a>
+                    <a class="vl-badge uk-margin-small-right">${tag.tagName}</a>
                 </#list>
                 </div>
                 <#if post.postThumbnail??>
                 <figure class="post-full-image" style="background-image: url(${post.postThumbnail})"></figure>
                 </#if>
             </div>
-            <!-- <div class="doc_content" id="essay_content" style="display:none;">$:item.content</div> -->
-            <div id="essay_content">${post.postContent?if_exists}</div>
+            <div class="doc_content">${post.postContent?if_exists}</div>
             <div class="doc_footer"></div>
         </div>
 
@@ -58,7 +58,7 @@
         <#include "comment.ftl">
     </div>
 
-    <div class=" col-md-3">
+    <div class="uk-width-1-4@m">
         <#include "sidebar.ftl"/>
     </div>
 </div>
@@ -70,8 +70,7 @@
 <script type="text/javascript" src="/${themeName}/source/js/sidebar.js"></script>
 <script type="text/javascript" src="/${themeName}/source/js/comment.js"></script>
 <script type="text/javascript">
-    /*var blogid = ${item.postId};
-
+    /*
     new Vue({
         el: '#articleArea', 
         mounted: function (argument) {

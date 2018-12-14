@@ -36,7 +36,7 @@
         </div>
         </#list>
 
-        <@page urlPrefix="${tag.tagUrl}/page"></@page>
+        <@page urlPrefix="/tags/${tag.tagUrl}/page"></@page>
     </div>
     <div class="col-md-3">
         <#include "sidebar.ftl"/>

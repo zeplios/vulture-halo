@@ -6,8 +6,8 @@ new Vue({
     },
     methods: {
         loadPopulars: function () {
-            var url = '/api/posts/hot';
-            var params = {
+            let url = '/api/posts/hot';
+            let params = {
                 count: 3
             };
             this.$http.get(url, {params: params}).then(response => {
@@ -19,7 +19,7 @@ new Vue({
             });
         },
         loadTags: function() {
-            var url = '/api/tags';
+            let url = '/api/tags';
             this.$http.get(url).then(response => {
                 // get body data
                 this.tags = response.body.result;

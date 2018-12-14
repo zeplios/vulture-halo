@@ -1,0 +1,77 @@
+.vl-badge {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #1e88e4;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.vl-badge:link, .vl-badge:visited,
+.vl-badge:active, .vl-badge:hover {
+    color: #ffffff;
+}
+
+.tag-block {
+    display: block;
+    padding: 24px;
+    border: 1px solid transparent;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+@media (min-width: 992px) {
+    .tag-block {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+.tag-block:hover {
+    border-color: #e6e9eb;
+}
+
+.tag-block-body {
+    padding-top: 20px;
+}
+
+.tag-block-body p {
+    margin-bottom: 24px;
+    color: #616366;
+    font-size: 16px;
+    line-height: 28px;
+}
+@media (max-width: 991px) {
+    .service-icon {
+        height: 120px;
+        width: 156px;
+    }
+}
+@media (max-width: 767px) {
+    .tag-blocks {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    .tag-block {
+        padding: 30px 0;
+    }
+    .tag-blocks:first-child.tag-block {
+        padding-top: 0;
+    }
+    .tag-blocks:last-child.tag-block {
+        padding-bottom: 0;
+    }
+}
+
+/*
+references
+zmdi: http://nd2.godesign.ch/examples/extended/icons.html
+zmdi: hhttps://github.com/zavoloklom/material-design-iconic-font
+pace: https://github.hubspot.com/pace/docs/welcome/
+select2: https://select2.org/
+fonticon: http://www.iconfont.cn
+*/

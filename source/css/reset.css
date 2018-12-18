@@ -60,6 +60,12 @@ a:hover, a:focus, .link:hover, .link:focus {
     text-decoration: none;
 }
 
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 28px;
+}
+
 body {
     margin: 0;
     color: #616366;
@@ -76,6 +82,25 @@ button {
     font: inherit;
     color: inherit;
     line-height: inherit;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt, dd {
+    line-height: 1.42857143;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
 }
 
 figure {
@@ -205,6 +230,13 @@ input:focus, textarea:focus, select:focus {
     outline: 0 !important;
 }
 
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
 mark {
     color: #000;
     background: #ff0;
@@ -216,6 +248,11 @@ nav {
 
 p {
     margin: 0 0 17px 0;
+}
+
+select {
+    text-transform: none;
+    color: rgba(0, 0, 0, 0);
 }
 
 small {
@@ -237,7 +274,14 @@ sub {
     bottom: -.25em;
 }
 
+table {
+     border-spacing: 0;
+     border-collapse: collapse;
+    background-color: transparent;
+}
+
 textarea {
+    font-feature-settings: inherit;
     border: 1px solid #DCDEE0;
     vertical-align: middle;
     border-radius: 3px;

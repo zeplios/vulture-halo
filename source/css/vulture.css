@@ -67,6 +67,182 @@
     }
 }
 
+.markdown table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: grey;
+}
+.markdown thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.markdown th {
+    font-weight: bold;
+}
+.markdown tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.markdown tbody tr:nth-of-type(odd) {
+    background: #fafafa;
+}
+.markdown td, .markdown  th {
+    padding: 8px 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.markdown            { font-family: "Microsoft Yahei", "Raleway",Helvetica,Arial,sans-serif; }
+.markdown            { font-size: 15px; font-weight: 300; font-style: normal; line-height: 25px; color: #616366; margin: 0 0 17px 0; padding: 0; }
+
+.markdown h1         { font-size: 28px; font-weight: 500; font-style: normal; line-height: 34px; color: #363b40; margin: 25px 0 25px 0; padding: 0; }
+.markdown h2         { font-size: 28px; font-weight: 500; font-style: normal; line-height: 34px; color: #363b40; margin: 25px 0 25px 0; padding: 0; }
+.markdown h3         { font-size: 20px; font-weight: 500; font-style: normal; line-height: 28px; color: #363b40; margin: 25px 0 25px 0; padding: 0; }
+.markdown h4         { font-size: 16px; font-weight: 500; font-style: normal; line-height: 22px; color: #363b40; margin: 18px 0 18px 0; padding: 0;  }
+.markdown h5         { font-size: 15px; font-weight: bold; font-style: normal; line-height: 22px; color: #363b40; margin: 18px 0 18px 0; padding: 0; }
+.markdown h6         { font-size: 14px; font-weight: bold; font-style: normal; line-height: 20px; color: #363b40; margin: 18px 0 18px 0; padding: 0; }
+.markdown h6.s1      { font-size: 13px; font-weight: bold; font-style: normal; line-height: 20px; color: #363b40; margin: 18px 0 18px 0; padding: 0; }
+
+.markdown p          { font-size: 15px; font-weight: 300; font-style: normal; line-height: 25px; color: #616366; margin: 0 0 17px 0; padding: 0; }
+
+.markdown ul         { list-style: disc; padding-left: 40px; }
+.markdown ol         { padding-left: 40px; }
+
+.markdown blockquote      { font-size: 14px; margin: 0 0 20px 40px; padding: 10px 20px; border-left: 5px solid #eeeeee; }
+.markdown blockquote > p  { font-size: 14px; }
+
+.markdown code       { font-family: "Consolas", "Menlo", "Monaco", monospace, serif; }
+.markdown code       { font-size: 0.9em; background-color: #f9f2f4; color: #c7254e; border-width: 0; border-radius: 3px; padding: 2px 4px; }
+.markdown p code     { font-size: 13px; }
+.markdown pre code   { font-size: 13px; border-width: 0; padding: 0; }
+
+.markdown pre {
+    font-size: 13px;
+    line-height: 1.5em;
+    color: #c7254e;
+    border-radius: 3px;
+    overflow: auto;
+    padding: 10px;
+    background-color: #f9f2f4;
+    /* background: linear-gradient(to bottom, #f9f2f4 0.0em, #f9f2f4 1.25em, #fffbfb 1.25em, #fffbfb 2.5em); */
+    /* background: -webkit-linear-gradient(to bottom, #f9f2f4 0.0em, #f9f2f4 1.25em, #fffbfb 1.25em, #fffbfb 2.5em); */
+    border: 1px solid #f9f2f4;
+}
+
+.markdown a          { color: #1e88e5; text-decoration: none; }
+.markdown a:link,
+.markdown a:visited,
+.markdown a:active   {}
+.markdown a:hover    { color: #3ba3ff; text-decoration: none; }
+.markdown a img      { border: none; }
+
+.markdown hr         { height: 0; margin: 35px 0; border-width: 0; border-top: solid 1px #eeeeee; }
+.markdown img        { max-width: 100%; }
+
+/* Override UiKit Styles */
+
+.uk-button {
+    min-width: 100px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 24px;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    /* box-shadow: 0 2px 6px rgba(0,0,0, 0.1); */
+    -webkit-transition: all ease-in .15s;
+    -moz-transition: all ease-in .15s;
+    -ms-transition: all ease-in .15s;
+    -o-transition: all ease-in .15s;
+    transition: all ease-in .15s;
+}
+
+.uk-button-small {
+    height: 42px;
+    min-width: 60px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.uk-button:active, .uk-button.active {
+    background-image: none;
+    outline: 0;
+}
+.uk-button:hover, .uk-button:focus, .uk-button.focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.uk-button-primary {
+    background-color: #1e88e5;
+    border-color: #1e88e5;
+}
+
+.uk-button-primary:active:hover, .uk-button-primary.active:hover, .open>.dropdown-toggle.uk-button-primary:hover,
+.uk-button-primary:active:focus, .uk-button-primary.active:focus, .open>.dropdown-toggle.uk-button-primary:focus,
+.uk-button-primary:active.focus, .uk-button-primary.active.focus, .open>.dropdown-toggle.uk-button-primary.focus {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40;
+}
+.uk-button-primary:active, .uk-button-primary.active, .open>.dropdown-toggle.uk-button-primary {
+    background-image: none;
+}
+.uk-button-primary:hover, .uk-button-primary:focus, .uk-button-primary.focus, .uk-button-primary:active, .uk-button-primary.active, .open>.uk-button-primary {
+    color: #fff;
+    background-color: #3ba3ff;
+    border-color: #3ba3ff;
+}
+
+.uk-button-primary.disabled, .uk-button-primary[disabled], fieldset[disabled] .uk-button-primary,
+.uk-button-primary.disabled:hover, .uk-button-primary[disabled]:hover, fieldset[disabled] .uk-button-primary:hover,
+.uk-button-primary.disabled:focus, .uk-button-primary[disabled]:focus, fieldset[disabled] .uk-button-primary:focus,
+.uk-button-primary.disabled.focus, .uk-button-primary[disabled].focus, fieldset[disabled] .uk-button-primary.focus,
+.uk-button-primary.disabled:active, .uk-button-primary[disabled]:active, fieldset[disabled] .uk-button-primary:active,
+.uk-button-primary.disabled.active, .uk-button-primary[disabled].active, fieldset[disabled] .uk-button-primary.active {
+    background-color: #1e88e5;
+    border-color: #2e6da4;
+}
+
+/* Common Styles */
+
+.width10 {width: 10%}
+.width20 {width: 20%}
+.width30 {width: 30%}
+.width40 {width: 40%}
+.width50 {width: 50%}
+.width60 {width: 60%}
+.width70 {width: 70%}
+.width80 {width: 80%}
+.width90 {width: 90%}
+.width100 {width: 100%}
+
+hr.hr10			{ height:10px; border:none; margin:0; padding:0; width:100%; }
+hr.hr15			{ height:15px; border:none; margin:0; padding:0; width:100%; }
+hr.hr20			{ height:20px; border:none; margin:0; padding:0; width:100%; }
+hr.hr30			{ height:30px; border:none; margin:0; padding:0; width:100%; }
+hr.hr40			{ height:40px; border:none; margin:0; padding:0; width:100%; }
+hr.hr50			{ height:50px; border:none; margin:0; padding:0; width:100%; }
+
+hr.hr3030 {
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    width: 100%;
+    border-width: 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
 /*
 references
 zmdi: http://nd2.godesign.ch/examples/extended/icons.html

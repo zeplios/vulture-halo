@@ -28,9 +28,9 @@
     <div class="uk-width-3-4@m">
         <@articleTag method="archives">
         <#list archives as archive>
-            <h3>${archive.year}年${archive.month}月</h3>
+            <h2>${archive.year}年${archive.month}月</h2>
             <#list archive.posts?sort_by("postDate")?reverse as post>
-            <div class="content box">
+            <div>
                 <h3>
                     <#--<#if item.top gt 0>-->
                     <#--<span style="color:red">[置顶]</span>-->

@@ -5,7 +5,6 @@ $(function() {
     handleResponsiveSidebar();
     handleAccordionMenu();
     handleTooltips();
-    handleFloatingLabels();
     // checkBoxes($('body'));
 
     if ($('body').hasClass('page-scrollspy')) {
@@ -166,11 +165,6 @@ var handleResponsiveSidebar = function() {
             target.removeClass('open');
         }
     });
-};
-
-var handleFloatingLabels = function() {
-    "use strict";
-    // $('.floatlabel').floatlabel();  
 };
 
 var handleAccordionMenu = function() {

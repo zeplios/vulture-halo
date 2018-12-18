@@ -9,9 +9,9 @@
         <div class="comment-header">
             <img class="comment-avatar" src="//gravatar.loli.net/avatar/none?s=256&d=${options.native_comment_avatar?default('mm')}">
             <input type="hidden" name="postId" value="${post.postId?c}">
-            <input type="text" class="comment-input comment-input-who" v-model="commentAuthor" placeholder="昵称(必填)">
-            <input type="text" class="comment-input comment-input-email" v-model="commentAuthorEmail" onblur="loadAvatar()" placeholder="邮箱(选填)">
-            <input type="text" class="comment-input comment-input-website" v-model="commentAuthorUrl" placeholder="网址(选填)">
+            <input type="text" v-model="commentAuthor" placeholder="昵称(必填)">
+            <input type="text" v-model="commentAuthorEmail" onblur="loadAvatar()" placeholder="邮箱(选填)">
+            <input type="text" v-model="commentAuthorUrl" placeholder="网址(选填)">
         </div>
     </div>
 
@@ -19,13 +19,13 @@
     <input type="hidden" ref="commentParent" value="0">
     <!--input type="text" v-model="ufrom" placeholder="您的邮箱，必填" class="width70"/><br/-->
     <div v-if="uto" style="text-indent:1em">to : {{utoFacade}}
-        <button class="btn btn-primary btn-sm" @click="normalComment()" style="margin-left:100px">切换到普通评论</button>
+        <button class="uk-button uk-button-primary uk-button-small" @click="normalComment()" style="margin-left:100px">切换到普通评论</button>
     </div>
     <textarea class="width100" style="height:200px" ref="commentContent"
               placeholder="${options.native_comment_placeholder?default('您的评论')}"></textarea>
     <div class="OwO"></div>
-    <button type="button" class="btn btn-primary btn-sm" @click="cancelReply" v-show="showCancelReply">取消回复</button>
-    <button type="button" class="btn btn-primary btn-sm" @click="submit" id="comment-submit">评论</button>
+    <button type="button" class="uk-button uk-button-primary uk-button-small" @click="cancelReply" v-show="showCancelReply">取消回复</button>
+    <button type="button" class="uk-button uk-button-primary uk-button-small" @click="submit" id="comment-submit">评论</button>
 
     <div class="comment-message" style="text-align: center;padding: 20px;display: none"></div>
     <div class="comment-info">

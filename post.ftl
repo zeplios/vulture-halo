@@ -30,7 +30,7 @@
 
 <div class="page-main container" id="articleArea" uk-grid>
     <div class="uk-width-3-4@m uk-width-1-1">
-        <div class="doc_container">
+        <div>
             <div class="doc_header">
                 <h1>${post.postTitle}</h1>
                 <input style="display: none" id="postId" value="${post.postId}"/>
@@ -47,7 +47,7 @@
                 <figure class="post-full-image" style="background-image: url(${post.postThumbnail})"></figure>
                 </#if>
             </div>
-            <div class="doc_content">${post.postContent?if_exists}</div>
+            <div class="markdown">${post.postContent?if_exists}</div>
             <div class="doc_footer"></div>
         </div>
 

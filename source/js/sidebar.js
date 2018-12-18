@@ -12,7 +12,11 @@ new Vue({
             };
             this.$http.get(url, {params: params}).then(response => {
                 // get body data
-                this.populars = response.body.result;
+                this.populars = [];
+                let populars = response.body.result;
+                for (let i = 0 ; i < populars.length && i < 3 ; i++) {
+                    this.populars.push(populars[i]);
+                }
             }, response => {
                 // error callback
                 throw response;

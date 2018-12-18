@@ -1,12 +1,3 @@
-const s = new OwO({
-    logo: 'OωO表情',
-    container: document.getElementsByClassName('OwO')[0],
-    target: document.getElementsByClassName('comment-input-content')[0],
-    position: 'down',
-    width: '100%',
-    maxHeight: '210px',
-    api: "/static/plugins/OwO/OwO.min.json"
-});
 
 /**
  * 格式化ua信息
@@ -115,7 +106,7 @@ new Vue({
                     localStorage.setItem('email', email);
                     localStorage.setItem('url', url);
                     if (data.code == 1) {
-                        $('.comment-input-content').val("");
+                        content.val("");
                         $(".comment-message").html("<span>" + data.msg + "</span>");
                     } else {
                         $(".comment-message").html("<span style='color:red'>" + data.msg + "</span>");
@@ -149,5 +140,15 @@ new Vue({
         this.commentAuthorEmail = localStorage.getItem("email");
         this.commentAuthorUrl = localStorage.getItem("url");
         this.loadAvatar();
+
+        new OwO({
+            logo: 'OωO表情',
+            container: document.getElementsByClassName('OwO')[0],
+            target: this.$refs.commentContent,
+            position: 'down',
+            width: '100%',
+            maxHeight: '210px',
+            api: "/static/plugins/OwO/OwO.min.json"
+        });
     },
 })

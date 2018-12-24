@@ -1,6 +1,6 @@
-<div class="sidebar box" id="ArticleSidebarCtrl">
+<div style="visibility: hidden" id="ArticleSidebarCtrl">
     <!-- 热门推荐 -->
-    <div>
+    <div class="uk-margin-bottom">
         <h3>热门文章</h3>
         <ul class="uk-list">
             <li v-for="article in populars">
@@ -10,18 +10,17 @@
         </ul>
     </div>
     <!-- ./热门推荐 -->
-    <div>
+    <div class="uk-margin-bottom">
         <h3>访问统计</h3>
         <a href="http://info.flagcounter.com/n3Zj"><img src="http://s04.flagcounter.com/count2/n3Zj/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
     </div>
-    <div>
+    <div class="uk-margin-bottom">
         <h3>搜索</h3>
         <form style="margin-left: 10px;" method="get" action="#">
-            <input type="text" name="s" placeHolder="搜索功能还没有做好哦" />
+            <input type="text" class="uk-input" placeHolder="搜索功能还没有做好哦" />
         </form>
     </div>
-
-    <div>
+    <div class="uk-margin-bottom">
         <h3>分类</h3>
         <ul class="uk-list">
         <@commonTag method="categories">
@@ -31,8 +30,7 @@
         </@commonTag>
         </ul>
     </div>
-
-    <div>
+    <div class="uk-margin-bottom">
         <h3>标签</h3>
         <ul class="uk-list">
         <@commonTag method="tags">
@@ -43,14 +41,14 @@
         </ul>
     </div>
 
-    <#--<div>-->
-        <#--<h3>标签</h3>-->
-        <#--<ul class="uk-list" v-for="tag in tags">-->
-            <#--<li><a :href="'/tags/' + tag.tagUrl">&nbsp;&nbsp;{{tag.tagName}}</a></li>-->
-            <#--<ul v-for="subtag in tag.sub">-->
-                <#--<li><a :href="'/tags/' + tag.tagUrl">&nbsp;&nbsp;{{subtag.tagName}}</a></li>-->
-            <#--</ul>-->
-        <#--</ul>-->
-    <#--</div>-->
+<#--<div>-->
+<#--<h3>标签</h3>-->
+<#--<ul class="uk-list" v-for="tag in tags">-->
+<#--<li><a :href="'/tags/' + tag.tagUrl">&nbsp;&nbsp;{{tag.tagName}}</a></li>-->
+<#--<ul v-for="subtag in tag.sub">-->
+<#--<li><a :href="'/tags/' + tag.tagUrl">&nbsp;&nbsp;{{subtag.tagName}}</a></li>-->
+<#--</ul>-->
+<#--</ul>-->
+<#--</div>-->
 </div>
 <!--End Sidebar -->

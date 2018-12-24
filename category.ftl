@@ -20,28 +20,30 @@
 </div>
 <!-- /.page-banner -->
 
-<div class="page-main container" uk-grid>
-    <div class="uk-width-3-4@m uk-width-1-1@s">
-        <#list posts.content?sort_by("postDate")?reverse as post>
-        <div class="content box">
-            <h3>
-                <#--<#if item.top gt 0>-->
-                <#--<span style="color:red">[置顶]</span>-->
-                <#--</#if>-->
-                <a href="${options.blog_url}/archives/${post.postUrl}">${post.postTitle}</a>
-                <span style="font-weight: normal">${post.postDate?string('MM月dd日')}</span>
-            </h3>
-            <p><span class="dropcap">${post.postSummary[0..0]}</span>${post.postSummary[1..]}...</p>
-            <div class="clear"></div>
-        </div>
-        </#list>
+<div class="uk-section uk-container">
+    <div uk-grid>
+        <div class="uk-width-3-4@m uk-width-1-1">
+            <#list posts.content?sort_by("postDate")?reverse as post>
+            <div class="content box">
+                <h3>
+                    <#--<#if item.top gt 0>-->
+                    <#--<span style="color:red">[置顶]</span>-->
+                    <#--</#if>-->
+                    <a href="${options.blog_url}/archives/${post.postUrl}">${post.postTitle}</a>
+                    <span style="font-weight: normal">${post.postDate?string('MM月dd日')}</span>
+                </h3>
+                <p><span class="dropcap">${post.postSummary[0..0]}</span>${post.postSummary[1..]}...</p>
+                <div class="clear"></div>
+            </div>
+            </#list>
 
-        <@page urlPrefix="/categories/${category.cateUrl}/page"></@page>
-    </div>
-    <div class="uk-width-1-4@m uk-width-1-1@s">
+            <@page urlPrefix="/categories/${category.cateUrl}/page"></@page>
+        </div>
+
+        <div class="uk-width-1-4@m uk-width-1-1">
         <#include "sidebar.ftl"/>
+        </div>
     </div>
-    <div class="clear"></div>
 </div>
 <!-- End Wrapper -->
 

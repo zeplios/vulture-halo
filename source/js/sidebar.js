@@ -1,7 +1,7 @@
 new Vue({
-    el: '#ArticleSidebarCtrl', 
+    el: '#ArticleSidebarCtrl',
     data: {
-        populars: [], 
+        populars: [],
         tags: []
     },
     methods: {
@@ -36,5 +36,8 @@ new Vue({
     created: function() {
         this.loadPopulars(this);
         this.loadTags(this);
+    },
+    mounted: function () {
+        document.getElementById('ArticleSidebarCtrl').style.visibility = 'visible';
     }
 });

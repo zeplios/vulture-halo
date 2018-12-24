@@ -64,9 +64,6 @@ new Vue({
         },
         normalComment: function() {
             $(this.$refs.commentParent).val(0);
-        },
-        cancelReply: function() {
-            $(this.$refs.commentParent).val(0);
             $(this.$refs.commentContent).attr("placeholder", "");
             this.showCancelReply = false;
         },

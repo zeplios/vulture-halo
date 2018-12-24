@@ -10,9 +10,9 @@
 <div class="page-banner">
 </div>
 
-<div class="page-main container">
-    <div class="col-md-9">
-        <div class="content box">
+<div class="uk-section uk-container">
+    <div uk-grid>
+        <div class="uk-width-3-4@m uk-width-1-1">
             <h3>标签列表</h3>
             <ul class="uk-list uk-list-large uk-list-divider">
             <@commonTag method="tags">
@@ -23,13 +23,11 @@
             </ul>
         </div>
 
-    </div>
-    <div class="col-md-3">
+        <div class="uk-width-1-4@m">
         <#include "sidebar.ftl"/>
+        </div>
     </div>
-    <div class="clear"></div>
 </div>
-<!-- End Wrapper -->
 
 <#include "common/footer.ftl"/>
 <#include "common/js.ftl"/>

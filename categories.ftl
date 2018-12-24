@@ -7,12 +7,13 @@
 </head>
 <body>
 <#include "common/nav.ftl"/>
+
 <div class="page-banner">
 </div>
 
-<div class="page-main container" uk-grid>
-    <div class="uk-width-3-4@m uk-width-1-1@s">
-        <div class="content box">
+<div class="uk-section uk-container">
+    <div uk-grid>
+        <div class="uk-width-3-4@m uk-width-1-1">
             <h3>分类列表</h3>
             <ul class="uk-list uk-list-large uk-list-divider">
             <@commonTag method="categories">
@@ -23,13 +24,11 @@
             </ul>
         </div>
 
-    </div>
-    <div class="uk-width-1-4@m uk-width-1-1@s">
+        <div class="uk-width-1-4@m">
         <#include "sidebar.ftl"/>
+        </div>
     </div>
-    <div class="clear"></div>
 </div>
-<!-- End Wrapper -->
 
 <#include "common/footer.ftl"/>
 <#include "common/js.ftl"/>
